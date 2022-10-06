@@ -156,13 +156,13 @@ class _HomePageState extends State<HomePage> {
         Column(
           children: [
             Container(
-              width: 25,
+              width: 20,
               height: 2,
               color: Colors.black,
             ),
             const SizedBox(height: 3),
             Container(
-              width: 25,
+              width: 20,
               height: 2,
               color: Colors.black,
               // round shape
@@ -198,7 +198,7 @@ class _HomePageState extends State<HomePage> {
           width: 80,
           height: 40,
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: Color.fromARGB(255, 26, 115, 218),
             borderRadius: BorderRadius.circular(15),
           ),
           child: const Center(
@@ -356,10 +356,14 @@ class _HomePageState extends State<HomePage> {
                   width: 49,
                   height: 46,
                   decoration: BoxDecoration(
-                    color: _amActive ? Colors.blue : Colors.white,
+                    color: _amActive
+                        ? Color.fromARGB(255, 26, 115, 218)
+                        : Colors.white,
                     borderRadius: BorderRadius.circular(15),
                     border: Border.all(
-                      color: _amActive ? Colors.blue : Colors.white,
+                      color: _amActive
+                          ? Color.fromARGB(255, 26, 115, 218)
+                          : Colors.white,
                     ),
                   ),
                   child: Center(
@@ -379,10 +383,14 @@ class _HomePageState extends State<HomePage> {
                   width: 49,
                   height: 46,
                   decoration: BoxDecoration(
-                    color: _pmActive ? Colors.blue : Colors.white,
+                    color: _pmActive
+                        ? Color.fromARGB(255, 26, 115, 218)
+                        : Colors.white,
                     borderRadius: BorderRadius.circular(15),
                     border: Border.all(
-                        color: _pmActive ? Colors.blue : Colors.white),
+                        color: _pmActive
+                            ? Color.fromARGB(255, 26, 115, 218)
+                            : Colors.white),
                   ),
                   child: Center(
                     child: Text(
@@ -502,14 +510,16 @@ class _HomePageState extends State<HomePage> {
       width: MediaQuery.of(context).size.width * 0.26,
       height: 30,
       decoration: BoxDecoration(
-        color: active ? Colors.blue : Colors.grey[300],
+        color: active ? Color.fromARGB(255, 26, 115, 218) : Colors.grey[300],
         borderRadius: BorderRadius.circular(20),
       ),
       child: Center(
         child: Text(
           text,
           style: TextStyle(
-              color: active ? Colors.white : Colors.black, fontSize: 12),
+              color: active ? Colors.white : Colors.black,
+              fontSize: 12,
+              fontWeight: FontWeight.w500),
         ),
       ),
     );
@@ -554,7 +564,7 @@ class _HomePageState extends State<HomePage> {
           width: MediaQuery.of(context).size.width,
           height: 60,
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: Color.fromARGB(255, 26, 115, 218),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Center(
@@ -581,7 +591,7 @@ class _HomePageState extends State<HomePage> {
         adapter: PickerDataAdapter<String>(pickerdata: timeData),
         changeToFirst: false,
         textAlign: TextAlign.left,
-        textStyle: const TextStyle(color: Colors.blue),
+        textStyle: const TextStyle(color: Color.fromARGB(255, 26, 115, 218)),
         selectedTextStyle: const TextStyle(color: Colors.red),
         columnPadding: const EdgeInsets.all(8.0),
         onConfirm: (Picker picker, List value) {
